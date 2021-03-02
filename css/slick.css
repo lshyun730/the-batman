@@ -1,0 +1,154 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+
+/*custom*/
+
+.slick-slide img{box-sizing: border-box;}
+.slick-active img{}
+
+.slick-prev{right: 12vw;z-index: 1;background: url(../images/ic_prev.png) no-repeat center center;}
+.slick-next{right: 5vw;background: url(../images/ic_next.png) no-repeat center center}
+.slick-arrow{position: absolute;bottom: 10vw;width: 2vw; height:5vw;text-indent: -9999px;background-size: contain;}
+
+.cast .slick-dots{position: absolute;top: 50%;transform: translateY(-30%); left: 5vw;display: flex;width: 43vw;flex-wrap: wrap;}
+.cast .slick-dots a{position: relative;display: block; color: #fff;margin-right: 3vw;text-align: center;width: 8vw;}
+.cast .slick-dots a::before{content: "";width: 8vw;height: 8vw;display: block;border-radius: 50%;margin: 3vw auto 1vw;opacity: .4;transition: opacity .2s;cursor: pointer;z-index: 1;position: relative}
+.cast .slick-dots a::after{content: "";width: 8vw;height: 8vw;display: block;border-radius: 50%;margin: 3vw auto 1vw;background: #000;position: absolute;top: -3vw;left: 50%;transform: translateX(-50%)}
+.cast .slick-dots li:nth-child(1) a::before{background: url(../images/img_s3_Thum1.png) no-repeat center center;background-size: cover}
+.cast .slick-dots li:nth-child(2) a::before{background: url(../images/img_s3_Thum2.png) no-repeat center center;background-size: cover}
+.cast .slick-dots li:nth-child(3) a::before{background: url(../images/img_s3_Thum3.png) no-repeat center center;background-size: cover}
+.cast .slick-dots li:nth-child(4) a::before{background: url(../images/img_s3_Thum4.png) no-repeat center center;background-size: cover}
+.cast .slick-dots li:nth-child(5) a::before{background: url(../images/img_s3_Thum5.png) no-repeat center center;background-size: cover}
+.cast .slick-dots li:nth-child(6) a::before{background: url(../images/img_s3_Thum6.png) no-repeat center center;background-size: cover}
+.cast .slick-dots .slick-active a::before{opacity: 1;cursor: pointer}
+.cast .slick-dots .slick-active a{}
+.cast .slick-dots .slick-active{}
+
+.s2 .slick-prev{bottom: 5vw}
+.s2 .slick-next{bottom: 5vw}
+
+.gallery_thumb .slick-prev{top: 50%;left: -0px;transform: translateY(-50%);}
+.gallery_thumb .slick-next{top: 50%;right: -0px;transform: translateY(-50%);}
+
+.videos .slick-prev{z-index:5;left: 50%;top: -10vh;transform: rotate(90deg) translate(0%,50%)}
+.videos .slick-next{z-index:5;left: 50%;;bottom:  -10vh;;transform: rotate(90deg) translate(0%,50%);}
