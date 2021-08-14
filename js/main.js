@@ -27,8 +27,8 @@ $(document).ready(function () {
 
         if(current > 99.9) {
             clearInterval(progressTimer);
-            $container.addClass('progress-compleat');
-            $container.animate({opacity:'0%'}, 1500, 'easeInOutQuint');
+            $container.addClass('progress-complete');
+            $container.animate({top:'-100%'}, 2000, 'easeInOutQuint');
         }
     }
 
