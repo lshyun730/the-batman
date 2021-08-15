@@ -17,20 +17,33 @@ $(document).ready(function () {
     imgLoad.on('progress', function(){
         imgLoaded++;
     });
-
+    
     function updateProgress(){
         var target = (imgLoaded / imgTotal) * 100;
         current += (target - current) * 0.1;  
-
+        
         $progressBar.css({width:current + '%'});
         $progressText.text(Math.floor(current) + '%');
-
+        
         if(current > 99.9) {
             clearInterval(progressTimer);
+            $('body').off('scroll touchmove mousewheel');
             $container.addClass('progress-complete');
             $container.animate({top:'-100%'}, 2000, 'easeInOutQuint');
         }
     }
+    
+    // Prevent scrolling during loading 
+    $('body').on('scroll touchmove mousewheel', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+    });
+    
+
+        
+
+        
 
     //ham-menu
     $(".ham").click(function (event) {
